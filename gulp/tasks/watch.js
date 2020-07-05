@@ -20,10 +20,10 @@ gulp.task("watch", () => {
     runSequence("sass");
     log(event);
   });
-  $.watch([config.src + `/**/**.js`], event => {
-    runSequence(["webpack"]);
-    log(event);
-  });
+  // $.watch([config.src + `/**/**.js`], event => {
+  //   runSequence(["webpack"]);
+  //   log(event);
+  // });
   $.watch(
     [
       config.src + `/**/*+(.png|.jpeg|.jpg|.gif|.svg)`,

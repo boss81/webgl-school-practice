@@ -14,7 +14,7 @@ gulp.task("copy", () => {
         config.src + `/**/*+(.png|.jpeg|.jpg|.gif|.svg|.ico|.mp4|.pdf)`,
         config.src + `/**/*.ico`,
         config.src + `/**/fonts/**/*`,
-        // config.src + `/**/*.js`,
+        config.src + `/**/*.js`,
         config.src + `/**/*.css`,
         config.src + `/**/*.html`,
         config.src + `/**/*.json`,

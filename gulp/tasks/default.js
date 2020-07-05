@@ -7,7 +7,8 @@ gulp.task("default", () => {
   return runSequence(
     "clean",
     "copy",
-    ["pug", "sass", "webpack"],
+    // ["pug", "sass", "webpack"],
+    ["pug", "sass"],
     ["server", "watch"]
   );
 });

@@ -1,0 +1,228 @@
+.mv-content {
+  width: 100%;
+  // height: 100%;
+  @include mq {
+  }
+}
+
+.mv-top {
+  width: 100%;
+  height: 390px;
+  position: relative;
+  @include mq {
+    // margin: 50px 0 0;
+    // height: 270px;
+    height: calc(537 / 620 * 100%);
+  }
+  &__inner {
+    background: url(../img/img_top_mv_bg.gif) top center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 390px;
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+    @include mq {
+      background: url(../img/img_top_mv_bg_sp.png) top center no-repeat;
+      background-size: cover;
+      width: 100%;
+      // height: 270px;
+      height: 0;
+      padding-top: calc(537 / 620 * 100%);
+    }
+  }
+  &__copy {
+    font-size: 10px;
+    line-height: 2.4;
+    text-align: left;
+    margin: 0 0 0 30px;
+    padding: 10px 0 0;
+    @include mq {
+      display: none;
+    }
+  }
+  &__wrap {
+    @include flex-center;
+    align-items: flex-start;
+    position: relative;
+    margin: 180px 110px 0 150px;
+    @include mq {
+      margin: 0;
+    }
+  }
+  &__logo {
+    max-width: 237px;
+    margin: 0 50px 0 0;
+    @include mq {
+      display: none;
+    }
+  }
+  &__img {
+    position: relative;
+    max-width: 730px;
+    z-index: 1;
+    overflow: hidden;
+    background-color: #fff;
+    opacity: 1 !important;
+
+    @include mq {
+      top: -120px;
+      top: -38vw;
+      padding: 0 20px;
+      max-width: 490px;
+    }
+    img {
+      max-height: 400px;
+      object-fit: cover;
+      transition: all 0.3s ease-out;
+    }
+    img:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__img-pc {
+    @include mq {
+      display: none;
+    }
+  }
+  &__img-sp {
+    display: none;
+    @include mq {
+      display: block;
+    }
+  }
+}
+
+.mv-bottom {
+  width: 100%;
+  height: 280px;
+  background-color: $black;
+  position: relative;
+  @include mq {
+    padding: 80px 0 0;
+    height: 260px;
+  }
+  &__inner {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    // @include flex-center;
+    @include mq {
+    }
+  }
+  &__wrap {
+    max-width: 280px;
+    width: 100%;
+    margin: 0 0 0 60px;
+    padding: 20px 0 0 0;
+    @include mq {
+      margin: 0;
+      padding: 0 20px;
+      max-width: 100%;
+    }
+  }
+  &__new {
+    font-size: 2.4rem;
+    @include roboto;
+    color: $red;
+    font-weight: bold;
+    letter-spacing: (100em / 1000);
+    padding: 5px 0;
+    @include mq {
+      font-size: 1.7rem;
+    }
+  }
+  &__date {
+    font-size: 1.8rem;
+    @include roboto;
+    color: $white;
+    font-weight: bold;
+    letter-spacing: (100em / 1000);
+    padding: 3px 0;
+    display: block;
+    @include mq {
+      width: 46%;
+      display: inline-block;
+      font-size: 1.2rem;
+    }
+  }
+  &__txt {
+    font-size: 1.8rem;
+    color: $white;
+    font-weight: bold;
+    padding: 0 0 10px;
+    display: block;
+    @include mq {
+      font-size: 1.5rem;
+      padding: 5px 0 10px;
+      display: block;
+    }
+  }
+  &__txt:hover {
+    color: $red;
+  }
+  &__tag {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: $white;
+
+    @include mq {
+      font-size: 1rem;
+    }
+    a {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: $white;
+      margin: 0 5px 0 0;
+
+      @include mq {
+        font-size: 1rem;
+      }
+    }
+    a::before {
+      content: "#";
+      display: inline-block;
+    }
+    a:hover {
+      color: $red;
+    }
+  }
+  &__views {
+    font-size: 1.4rem;
+    @include roboto;
+    font-weight: bold;
+    color: $white;
+    padding: 30px 0 0;
+    &.pc {
+      @include mq {
+        display: none;
+      }
+    }
+    &.sp {
+      display: none;
+      @include mq {
+        width: 50%;
+        display: inline-block;
+        text-align: right;
+        // display: block;
+        padding: 0;
+      }
+    }
+
+    @include mq {
+    }
+  }
+  &__views::before {
+    content: "";
+    display: inline-block;
+    background: url(../img/icon_views_white.png) center center no-repeat;
+    background-size: contain;
+    width: 18px;
+    height: 10px;
+    margin: 0 10px 0 5px;
+    @include mq {
+      margin: 0 10px;
+    }
+  }
+}

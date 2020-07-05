@@ -1,0 +1,70 @@
+{
+  "name": "frontend-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp",
+    "build": "gulp build --env=production",
+    "build:watch": "gulp --env=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "ageha",
+  "license": "ISC",
+  "homepage": "",
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/register": "^7.6.2",
+    "autoprefixer": "^9.6.1",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
+    "del": "^4.1.1",
+    "gulp": "3.9.1",
+    "gulp-cached": "^1.1.1",
+    "gulp-changed": "^3.2.0",
+    "gulp-data": "^1.3.1",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-if": "^2.0.2",
+    "gulp-load-plugins": "^1.6.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-progeny": "^0.4.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-watch": "^5.0.1",
+    "minimist": "^1.2.0",
+    "path": "^0.12.7",
+    "pug": "^2.0.4",
+    "require-dir": "^1.2.0",
+    "run-sequence": "^2.2.1",
+    "sort-css-media-queries": "^1.4.3",
+    "webpack": "^4.41.2",
+    "webpack-stream": "^5.2.1"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "ie": 11
+          },
+          "useBuiltIns": "usage",
+          "corejs": 3
+        }
+      ]
+    ]
+  },
+  "dependencies": {
+    "core-js": "^3.5.0"
+  }
+}

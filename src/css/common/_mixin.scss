@@ -1,0 +1,38 @@
+// 中央寄せ
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-bt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin roboto {
+  font-family: "Roboto Slab", serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// メディアクエリ
+$mq-breakpoints: (
+  "xsmall": 320px,
+  "small": 500px,
+  "medium": 768px,
+  "main": 950px,
+  "large": 1024px,
+  "xlarge": 1280px
+);
+@mixin mq($breakpoint: medium, $rule: min, $subtraction: false) {
+  $breakpoint: map_get($mq-breakpoints, $breakpoint);
+  @if $rule==max and $subtraction {
+    $breakpoint: $breakpoint - 1;
+  }
+  @media screen and (#{$rule}-width: $breakpoint) {
+    @content;
+  }
+}

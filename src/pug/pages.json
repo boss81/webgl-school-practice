@@ -1,0 +1,22 @@
+{
+  "og_site_name": "ogテストサイト",
+  "og_locale": "ja_JP",
+  "index": {
+    "title": "テストサイト",
+    "keywords": "キーワード",
+    "description": "ディスクリプション",
+    "og_title": "ogタイトル",
+    "og_description": "ogディスクリプション",
+    "og_type": "website",
+    "og_url": "http://www"
+  },
+  "underpage": {
+    "title": "下層テストサイト",
+    "keywords": "キーワード",
+    "description": "ディスクリプション",
+    "og_title": "ogタイトル",
+    "og_description": "ogディスクリプション",
+    "og_type": "article",
+    "og_url": "https://www"
+  }
+}

@@ -1,0 +1,84 @@
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  overflow-x: hidden;
+  // font-family: '遊ゴシック', YuGothic, 'Hiragino Kaku Gothic Pro', Verdana, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  font-family: "Noto Sans JP", "Avenir", "Helvetica Neue", "Helvetica", "Arial",
+  "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ",
+  Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 1.2rem;
+  color: #212121;
+  word-wrap: break-word;
+  /* フォントレンダリング設定: 1x解像度ではsubpixel、2x以上の解像度ではgrayscale */
+
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: unset;
+
+  @include mq {
+    font-size: 1.6rem;
+  }
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.8;
+}
+input {
+  vertical-align: bottom;
+  margin: 0;
+  padding: 0;
+}
+
+@include mq {
+  .br-pc::before {
+    content: "\A";
+    white-space: pre;
+  }
+  .br-sp::before {
+    content: "";
+    white-space: normal;
+  }
+}
+
+.br-sp::before {
+  content: "\A";
+  white-space: pre;
+}
+
+.br::before {
+  content: "\A";
+  white-space: pre;
+}
+
+.fadein {
+  // transform: translate(0, 30px);
+  transition: all 300ms ease-out;
+  opacity: 0;
+
+  @include mq {
+    // opacity: 1;
+  }
+}
+
+.fadein.on {
+  opacity: 1;
+  // transform: translate(0, 0);
+}

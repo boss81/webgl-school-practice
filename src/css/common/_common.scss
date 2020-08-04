@@ -1,0 +1,8 @@
+.list {
+  padding: 40px;
+  &__item {
+    &:not(:first-child) {
+      margin-top: 40px;
+    }
+  }
+}
